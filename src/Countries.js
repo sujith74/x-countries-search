@@ -34,11 +34,11 @@ function Countries() {
         <input type='text' placeholder="Search for countries" value={search} onChange={(e) => setSearch(e.target.value)} className='search'></input>
         <div className="Countries">
             {countries.length > 0 && (countries.filter(country => country.name.common.toLowerCase().includes(search.toLowerCase())).map(country =>
-                <div key={country.name.common} className="card">
-                    <div className='countryCard'>
+                <div key={country.name.common} className="countryCard">
+                    {/* <div className='countryCard'> */}
                     <img src={country.flags.png} alt={`${country.name.common} flag`} />
                     <h2>{country.name.common}</h2>
-                    </div>
+                    {/* </div> */}
                 </div>
             ))}
         </div>
